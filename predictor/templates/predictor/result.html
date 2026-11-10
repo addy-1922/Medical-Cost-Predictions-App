@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{% static 'predictor/style.css' %}">
+</head>
+<body>
+    <main class="page result-page">
+        <section class="intro">
+            <div class="eyebrow">PREDICTION COMPLETE</div>
+            <h1>Your estimated<br><span>insurance charges</span></h1>
+            <p>Your details have been processed by the trained Random Forest model.</p>
+        </section>
+
+        <section class="result-card">
+            <div class="result-label">Estimated medical insurance charges</div>
+            <div class="amount">₹{{ prediction|floatformat:2 }}</div>
+            <p class="result-note">This is the model's estimate based on the information entered.</p>
+            <a class="back-button" href="{% url 'home' %}">← Make another prediction</a>
+        </section>
+        <footer>Medical Insurance Charges Prediction · Django + Scikit-learn</footer>
+    </main>
+</body>
+</html>
