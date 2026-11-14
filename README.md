@@ -1,5 +1,7 @@
 # Medical Insurance Charges Prediction — Django
 
+🚀 **Live Demo:** [Click Here to View the Application](https://medical-cost-predictions-app.onrender.com)
+
 A Django web app that loads your trained RandomForestRegressor and predicts medical insurance charges.
 
 ## Model details checked from your uploaded `Medical.pickle`
@@ -21,7 +23,7 @@ Open a terminal in this project folder:
 
 ```bash
 py -3.12 -m venv venv
-venv\\Scripts\\activate
+venv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python manage.py migrate
